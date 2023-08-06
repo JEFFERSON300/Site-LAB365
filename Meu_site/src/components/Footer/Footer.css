@@ -1,0 +1,28 @@
+.footer {
+  background-color: #000000;
+  min-height: 348px;
+}
+
+.pt-33 {
+  padding-top: 33px;
+}
+
+.ps-37 {
+  padding-left: 37px;
+}
+
+.pe-37 {
+  padding-right: 37px;
+}
+
+.pt-16 {
+  padding-top: 16px;
+}
+
+.fs-7 {
+  font-size: 12px;
+}
+
+.wd-30 {
+  width: 30vw;
+}
