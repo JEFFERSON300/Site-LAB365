@@ -7,10 +7,12 @@ import { CardContactComponent } from "../../CardContact/CardContact.component";
 export const ContactPage = () => {
   const menu = [
     {
-      label: "Produtos",
+      label: "Home",
+      link: "/",
     },
     {
-      label: "Contatos",
+      label: "Produtos",
+      link: "/products",
     },
   ];
   return (

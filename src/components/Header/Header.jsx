@@ -1,13 +1,17 @@
 import "./Header.css";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Header(props) {
   const menuItem = (item) => {
     return (
       <li className="nav-item">
-        <a href="#" className="nav-link active text-light fw-bold me-3 fs-6">
+        <Link
+          className="nav-link active text-light fw-bold me-3 fs-6"
+          to={`${item.link}`}
+        >
           {item.label}
-        </a>
+        </Link>
       </li>
     );
   };

@@ -3,13 +3,15 @@ import Banner from "../../Banner/Banner";
 import Products from "../../Products/Products";
 import Footer from "../../Footer/Footer";
 
-export const HomePage = () => {
+export const ProductPage = () => {
   const menu = [
     {
-      label: "Produtos",
+      label: "Home",
+      link: "/",
     },
     {
       label: "Contatos",
+      link: "/faq",
     },
   ];
 
