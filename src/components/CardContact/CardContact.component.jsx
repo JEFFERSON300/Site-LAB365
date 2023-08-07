@@ -34,7 +34,6 @@ export const CardContactComponent = () => {
         </div>
         </div>
         
-        
         </Card.Body>
 
       </Card>

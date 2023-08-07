@@ -7,7 +7,6 @@ export const FormContactComponent = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
