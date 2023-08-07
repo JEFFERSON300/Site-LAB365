@@ -1,4 +1,5 @@
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { ProductPage } from "./components/Pages/ProductPage/Product.page";
 import { ContactPage } from "./components/Pages/ContactPage/Contact.page";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

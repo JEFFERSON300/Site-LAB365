@@ -50,14 +50,14 @@ export const FormContactComponent = () => {
           }}
         >
           <div
-            style={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+            style={{ display: "flex", flexDirection: "column", flexGrow: "1", flexShrink:"1", flexBasis:"0%" }}
           >
             <label>Nome</label>
             <input style={{height:"2.5rem"}} placeholder="Digite seu nome..." {...register("name",{required:true})} />
           </div>
 
           <div
-            style={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+            style={{ display: "flex", flexDirection: "column", flexGrow: "1", flexShrink:"1", flexBasis:"0%" }}
           >
             <label>Telefone</label>
             <input
