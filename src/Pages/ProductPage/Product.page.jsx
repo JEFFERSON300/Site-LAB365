@@ -1,9 +1,9 @@
-import Header from "../../Header/Header";
-import Banner from "../../Banner/Banner";
-import Products from "../../Products/Products";
-import Footer from "../../Footer/Footer";
+import Header from "../../components/Header/Header";
+import Banner from "../../components/Banner/Banner";
+import Products from "../../components/Products/Products";
+import Footer from "../../components/Footer/Footer";
 import { useContext } from "react";
-import { BannerContext } from "../../../context/context";
+import { BannerContext } from "../../context/context";
 
 export const ProductPage = () => {
   const { titlesBanner, setTitlesBanner } = useContext(BannerContext);
@@ -13,8 +13,12 @@ export const ProductPage = () => {
       link: "/",
     },
     {
-      label: "Contatos",
-      link: "/contacts",
+      label: "Produtos",
+      link: "/products",
+    },
+    {
+      label: "Contato",
+      link: "/contact",
     },
     {
       label: "FAQ",

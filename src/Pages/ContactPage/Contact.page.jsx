@@ -1,10 +1,10 @@
-import Header from "../../Header/Header";
-import Banner from "../../Banner/Banner";
-import Footer from "../../Footer/Footer";
-import { FormContactComponent } from "../../FormContact/FormContact.component";
-import { CardContactComponent } from "../../CardContact/CardContact.component";
+import Header from "../../components/Header/Header";
+import Banner from "../../components/Banner/Banner";
+import Footer from "../../components/Footer/Footer";
+import { FormContactComponent } from "../../components/FormContact/FormContact.component";
+import { CardContactComponent } from "../../components/CardContact/CardContact.component";
 import { useContext } from "react";
-import { BannerContext } from "../../../context/context";
+import { BannerContext } from "../../context/context";
 
 export const ContactPage = () => {
   const { titlesBanner, setTitlesBanner } = useContext(BannerContext);
@@ -16,6 +16,14 @@ export const ContactPage = () => {
     {
       label: "Produtos",
       link: "/products",
+    },
+    {
+      label: "Contato",
+      link: "/contact",
+    },
+    {
+      label: "FAQ",
+      link: "/faq",
     },
   ];
   return (

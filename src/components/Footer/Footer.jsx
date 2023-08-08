@@ -9,7 +9,7 @@ function Footer() {
       <div className="d-flex flex-wrap text-light pt-33 ps-37 gap-5">
         <div className="wd-30">
           <a className="nav-link active fw-bold fs-2 " href="#">
-            BikeFloripa
+            My Company
           </a>
         </div>
 

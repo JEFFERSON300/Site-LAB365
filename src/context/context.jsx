@@ -20,6 +20,10 @@ export const BannerContext = createContext({
       title: "",
       subtitle: "",
     },
+    error: {
+      title: "",
+      subtitle: "",
+    },
   },
   setPage: () => {},
 });
@@ -41,6 +45,10 @@ export const BannerProvider = ({ children }) => {
     faq: {
       title: "Duvidas Frequentes",
       subtitle: "Perguntas frequentes",
+    },
+    error: {
+      title: "Vixi Não encontramos essa página",
+      subtitle: "Opssss",
     },
   });
 
