@@ -2,8 +2,11 @@ import Header from "../../Header/Header";
 import Banner from "../../Banner/Banner";
 import Products from "../../Products/Products";
 import Footer from "../../Footer/Footer";
+import { useContext } from "react";
+import { BannerContext } from "../../../context/context";
 
 export const ProductPage = () => {
+  const { titlesBanner, setTitlesBanner } = useContext(BannerContext);
   const menu = [
     {
       label: "Home",
@@ -11,6 +14,10 @@ export const ProductPage = () => {
     },
     {
       label: "Contatos",
+      link: "/contacts",
+    },
+    {
+      label: "FAQ",
       link: "/faq",
     },
   ];
@@ -45,7 +52,10 @@ export const ProductPage = () => {
   return (
     <>
       <Header menu={menu} />
-      <Banner />
+      <Banner
+        title={titlesBanner.products.title}
+        subtitle={titlesBanner.products.subtitle}
+      />
       <Products allProducts={products} />
       <Footer />
     </>
