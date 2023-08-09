@@ -1,7 +1,6 @@
 import "./CardProductComponent.css";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { ModalBody } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
