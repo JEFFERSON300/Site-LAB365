@@ -1,7 +1,15 @@
 import "./CardProductComponent.css";
 import PropTypes from "prop-types";
+import { useState } from "react";
+import { ModalBody } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 function CardProductComponent(props) {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const getImage = (name) => {
     const BASEPATH = "./images/NAME_IMAGE";
     return BASEPATH.replace("NAME_IMAGE", name);
@@ -48,6 +56,7 @@ function CardProductComponent(props) {
       <div className="row g-0">
         <div className="col-md-4">
           <img
+            onClick={handleShow}
             style={{ position: "relative" }}
             src={getImage(props.productItem.imagePath)}
             className="rounded-start img-fluid"
@@ -91,6 +100,49 @@ function CardProductComponent(props) {
           </div>
         </div>
       </div>
+
+      <Modal size="lg" show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Detalhes do Produto</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <h4>{props.productItem.product}</h4>
+            <h4>
+              {props.productItem.price ? `R$ ` + props.productItem.price : ""}
+            </h4>
+          </div>
+          <img
+            style={{ maxWidth: "100%" }}
+            src={getImage(props.productItem.imagePath)}
+            className="rounded-start img-fluid"
+            alt="..."
+          />
+          <p>{props.productItem.description}</p>
+
+          <h4>Características</h4>
+          <p>
+            <ul
+              style={{ display: "flex", justifyContent: "space-between" }}
+              className="list-unstyled"
+            >
+              {props.productItem.characteristics.length > 0
+                ? props.productItem.characteristics.map(characterItem)
+                : characterEmpty()}
+            </ul>
+          </p>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="danger" onClick={handleClose}>
+            Fechar
+          </Button>
+          <Button variant="warning" onClick={handleClose}>
+            Comprar
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
