@@ -2,10 +2,9 @@ import "./CardProductComponent.css";
 import PropTypes from "prop-types";
 
 function CardProductComponent(props) {
-  
   const getImage = (name) => {
     const BASEPATH = "./images/NAME_IMAGE";
-    return (BASEPATH.replace("NAME_IMAGE",name));
+    return BASEPATH.replace("NAME_IMAGE", name);
   };
 
   const characterItem = (item) => {
@@ -49,10 +48,22 @@ function CardProductComponent(props) {
       <div className="row g-0">
         <div className="col-md-4">
           <img
+            style={{ position: "relative" }}
             src={getImage(props.productItem.imagePath)}
             className="rounded-start img-fluid"
             alt="..."
           />
+          <p
+            style={{
+              position: "absolute",
+              color: "white",
+              top: "11.5rem",
+              backgroundColor: "#FFC107",
+              fontSize: "20px",
+            }}
+          >
+            {props.productItem.price ? `R$` + props.productItem.price : ""}
+          </p>
         </div>
         <div className="col-md-8">
           <div className="card-body d-flex align-items-center">
@@ -91,6 +102,7 @@ CardProductComponent.propTypes = {
     product: PropTypes.string,
     description: PropTypes.string,
     characteristics: PropTypes.arrayOf(PropTypes.string),
+    price: PropTypes.number,
   }),
 };
 
